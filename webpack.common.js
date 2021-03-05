@@ -1,5 +1,23 @@
+const filesystem = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const pages = filesystem
+  .readdirSync(path.resolve(__dirname, 'src/html'))
+  .reduce((fileNames, file) => {
+    const fileSplit = file.split('.');
+    if (fileSplit[1] === 'html') fileNames.push(fileSplit[0]);
+    return fileNames;
+  }, []);
+
+const addPage = page => {
+  const name = page === 'index' ? 'home' : page;
+  return new HtmlWebpackPlugin({
+    title: name[0].toUpperCase() + name.slice(1),
+    template: path.resolve(__dirname, `src/html/${page}.html`),
+    filename: `${page}.html`,
+  });
+};
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/js/index.js'),
@@ -7,18 +25,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Home',
-      template: path.resolve(__dirname, 'src/html/index.html'),
-      filename: 'index.html',
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Gallery',
-      template: path.resolve(__dirname, 'src/html/gallery.html'),
-      filename: 'gallery.html',
-    }),
-  ],
+  plugins: pages.map(page => addPage(page)),
   module: {
     rules: [
       {
