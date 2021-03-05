@@ -4,9 +4,24 @@
   "description": "Webpack with Eleventy boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/Mofunkles/webfunkles.git"
+  },
   "author": "Mofunkles",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mofunkles/webfunkles/issues"
+  },
+  "homepage": "https://github.com/Mofunkles/webfunkles#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "cross-env": "^7.0.3",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-merge": "^5.7.3"
+  }
 }
