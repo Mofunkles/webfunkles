@@ -1,15 +1,26 @@
 @use 'variables' as *;
+@use 'fonts' as *;
 
 .header {
   color: $grey--100;
   background-color: $grey--600;
-  padding: 3rem;
+  padding: 6rem 3rem;
 
   &__title {
+    font-size: 7rem;
     margin-bottom: 2rem;
+    padding-left: 10rem;
+    position: relative;
 
     &--fancy {
+      font-family: 'Arizonia';
+      font-size: 7rem;
       color: $yellow--400;
+      text-shadow: 0 0 1rem $grey--700;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-10deg) translate(-25%, -50%);
     }
   }
 }
