@@ -1,1 +1,8 @@
 @forward 'header';
+
+.gallery {
+  &__image {
+    max-width: 500px;
+    object-fit: cover;
+  }
+}

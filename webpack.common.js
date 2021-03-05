@@ -24,6 +24,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',
+    assetModuleFilename: '[name][hash][ext]',
   },
   plugins: pages.map(page => addPage(page)),
   module: {
@@ -39,6 +40,10 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(svg|png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
     ],
