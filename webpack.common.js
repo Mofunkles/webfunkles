@@ -13,5 +13,10 @@ module.exports = {
       template: path.resolve(__dirname, 'src/html/index.html'),
       filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      title: 'Gallery',
+      template: path.resolve(__dirname, 'src/html/gallery.html'),
+      filename: 'gallery.html',
+    }),
   ],
 };

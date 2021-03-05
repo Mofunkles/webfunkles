@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+.header {
+  color: $grey--100;
+  background-color: $grey--600;
+  padding: 3rem;
+
+  &__title {
+    margin-bottom: 2rem;
+
+    &--fancy {
+      color: $yellow--400;
+    }
+  }
+}
+
+.navigation {
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    border: 2px solid $orange--400;
+    border-radius: 5rem;
+    padding: 1rem 3rem;
+
+    &:not(:first-child) {
+      margin-left: 3rem;
+    }
+  }
+}

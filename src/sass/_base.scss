@@ -1,0 +1,41 @@
+@use 'variables' as *;
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 2rem;
+  height: 100vh;
+  color: $grey--700;
+  background-image: linear-gradient(
+    to bottom right,
+    $yellow--400,
+    $orange--400
+  );
+}
+
+main {
+  padding: 3rem;
+}
+
+a:link,
+a:visited {
+  color: $orange--400;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: $yellow--400;
+}
