@@ -19,4 +19,13 @@ module.exports = {
       filename: 'gallery.html',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
 };

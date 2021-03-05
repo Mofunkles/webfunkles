@@ -25,6 +25,11 @@ body {
   );
 }
 
+::selection {
+  color: $grey--700;
+  background-color: $yellow--400;
+}
+
 main {
   padding: 3rem;
 }
