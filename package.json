@@ -7,7 +7,7 @@
     "start": "npm-run-all --parallel dev:*",
     "build": "npm-run-all clean prod:*",
     "clean": "rimraf src/html",
-    "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --watch --quiet",
     "dev:webpack": "webpack serve --config webpack.development.js",
     "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
     "prod:webpack": "webpack --config webpack.production.js"

@@ -5,8 +5,12 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
+    compress: true,
     open: true,
     port: 4040,
+    watchOptions: {
+      ignore: /node_modules/,
+    },
   },
   module: {
     rules: [
