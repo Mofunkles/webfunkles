@@ -4,11 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const pages = filesystem
   .readdirSync(path.resolve(__dirname, 'src/html'))
-  .reduce((fileNames, file) => {
-    const fileSplit = file.split('.');
-    if (fileSplit[1] === 'html') fileNames.push(fileSplit[0]);
-    return fileNames;
-  }, []);
+  .map(file => file.split('.')[0]);
 
 const addPage = page => {
   const name = page === 'index' ? 'home' : page;
