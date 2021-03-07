@@ -12,6 +12,7 @@ const addPage = page => {
     title: name[0].toUpperCase() + name.slice(1),
     template: path.resolve(__dirname, `src/html/${page}.html`),
     filename: `${page}.html`,
+    inject: false,
   });
 };
 
@@ -25,10 +26,6 @@ module.exports = {
   plugins: pages.map(page => addPage(page)),
   module: {
     rules: [
-      {
-        test: /\.html$/,
-        use: ['html-loader'],
-      },
       {
         test: /\.js$/,
         exclude: /node_modules/,

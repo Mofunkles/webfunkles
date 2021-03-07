@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/arizonia-v11-latin-regular.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/poppins-v15-latin-regular.woff2" crossorigin />
     <meta name="description" content="Webpack & Eleventy boilerplate demonstration page." />
+    <link rel="preload" as="font" type="font/woff2" href="<%= require('../assets/fonts/arizonia-v11-latin-regular.woff2') %>" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="<%= require('../assets/fonts/poppins-v15-latin-regular.woff2') %>" crossorigin />
+    <%= htmlWebpackPlugin.tags.headTags[1] %> <%= htmlWebpackPlugin.tags.headTags[0] %>
     <title>Webfunkles | Webpack & Eleventy Boilerplate - {{ title }}</title>
   </head>
   <body>
