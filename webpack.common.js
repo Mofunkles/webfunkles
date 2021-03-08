@@ -2,16 +2,12 @@ const filesystem = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const pages = filesystem
-  .readdirSync(path.resolve(__dirname, 'src/html'))
-  .map(file => file.split('.')[0]);
+const pages = filesystem.readdirSync(path.resolve(__dirname, 'src/html'));
 
 const addPage = page => {
-  const name = page === 'index' ? 'home' : page;
   return new HtmlWebpackPlugin({
-    title: name[0].toUpperCase() + name.slice(1),
-    template: path.resolve(__dirname, `src/html/${page}.html`),
-    filename: `${page}.html`,
+    template: path.resolve(__dirname, `src/html/${page}`),
+    filename: page,
     inject: false,
   });
 };
