@@ -1,0 +1,7 @@
+@forward 'header';
+@forward 'footer';
+
+.content {
+  display: grid;
+  place-items: center;
+}
