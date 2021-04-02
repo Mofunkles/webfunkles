@@ -1,11 +1,6 @@
 @use 'variables' as *;
 @use 'fonts' as *;
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
@@ -14,48 +9,52 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  min-height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
 body {
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  min-height: 100vh;
-  color: $grey--700;
   background-image: linear-gradient(
     to bottom right,
     $yellow--400,
     $orange--400
   );
-}
 
-::selection {
-  color: $grey--700;
-  background-color: $yellow--400;
-}
+  display: grid;
+  grid-template-columns: auto minmax(32rem, 126rem) auto;
+  grid-template-rows: auto 1fr auto;
 
-main {
-  padding: 3rem;
+  & > :not(:first-child) {
+    grid-column: 2 / -2;
+  }
 }
 
 a:link,
 a:visited {
-  color: $orange--400;
+  display: block;
   text-decoration: none;
+  color: $grey--100;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-a:hover,
-a:active {
+a:hover {
   color: $yellow--400;
+  transform: translateY(-1px);
+}
+
+a:active {
+  color: $orange--400;
+  transform: initial;
 }
 
 .icon {
-  fill: $orange--400;
-  width: 3rem;
-  height: 3rem;
-
-  &--dark {
-    fill: $grey--700;
-  }
-}
-
-.hidden {
-  display: none;
+  fill: $grey--100;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
 }

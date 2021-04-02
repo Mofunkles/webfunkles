@@ -3,6 +3,7 @@ module.exports = config => {
     dir: {
       input: 'src/templates',
       output: 'src/html',
+      layouts: '_layouts',
     },
   };
 };
