@@ -9,7 +9,7 @@
     "clean:eleventy": "rimraf src/html",
     "clean:webpack": "rimraf dist",
     "dev:eleventy": "cross-env ELEVENTY_ENV=development eleventy --watch --quiet",
-    "dev:webpack": "webpack serve --config webpack.development.js",
+    "dev:webpack": "wait-on src/html && webpack serve --config webpack.development.js",
     "prod:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
     "prod:webpack": "webpack --config webpack.production.js"
   },
@@ -40,6 +40,7 @@
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
+    "wait-on": "^5.3.0",
     "webpack": "^5.30.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
