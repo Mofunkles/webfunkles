@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
-.page-footer {
-  background-color: $orange--400;
+.page-navigation {
+  background: $orange--400;
 
   display: grid;
   grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;
@@ -17,7 +17,7 @@
 
   &__logo {
     font-family: 'Arizonia', serif;
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     color: $grey--800;
@@ -27,21 +27,13 @@
     display: block;
   }
 
-  &__text {
-    margin-top: $gap--small;
-    margin-bottom: $gap--medium;
-    font-size: $font--small;
-  }
+  &__list {
+    list-style: none;
 
-  &__icons {
+    display: flex;
+
     & > :not(:first-child) {
       margin-left: $gap--medium;
     }
-  }
-
-  &__icon {
-    width: 3rem;
-    height: 3rem;
-    fill: $grey--700;
   }
 }

@@ -18,43 +18,29 @@ html {
 body {
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  background-image: linear-gradient(
-    to bottom right,
-    $yellow--400,
-    $orange--400
-  );
+  font-size: $font--large;
+  line-height: 1.2;
 
   display: grid;
-  grid-template-columns: auto minmax(32rem, 126rem) auto;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;
+  grid-template-rows: repeat(3, auto) 1fr auto;
 
-  & > :not(:first-child) {
-    grid-column: 2 / -2;
+  & > * {
+    grid-column: 1 / -1;
   }
 }
 
 a:link,
 a:visited {
-  display: block;
   text-decoration: none;
-  color: $grey--100;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  color: $black;
 }
 
-a:hover {
-  color: $yellow--400;
-  transform: translateY(-1px);
-}
-
+a:hover,
 a:active {
-  color: $orange--400;
-  transform: initial;
+  font-weight: 600;
 }
 
-.icon {
-  fill: $grey--100;
-  width: 2rem;
-  height: 2rem;
-  margin-right: 1rem;
+.content {
+  display: grid;
 }
