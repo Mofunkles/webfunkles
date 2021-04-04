@@ -1,12 +1,24 @@
-$yellow--400: #fc0;
 $orange--400: #fa0;
+$orange--600: #d80;
 
-$grey--100: #fff;
-$grey--200: #ddd;
-$grey--300: #bbb;
+$white: #fff;
+$grey--100: #eee;
+$grey--200: #ccc;
+$grey--300: #aaa;
 $grey--400: #999;
 $grey--500: #777;
 $grey--600: #555;
 $grey--700: #333;
 $grey--800: #111;
-$grey--900: #000;
+$black: #000;
+
+$font--small: 1.2rem;
+$font--medium: 1.6rem;
+$font--large: 2rem;
+
+$gap--small: 1rem;
+$gap--medium: 3rem;
+$gap--large: 5rem;
+
+$page--max-width: 126rem;
+$page--min-width: 32rem;

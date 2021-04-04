@@ -1,8 +1,9 @@
 ---
 title: Home
-header__main: First Page Header
+header__main: Home Page
 header__sub: A boilerplate demonstration of eleventy with webpack
 layout: _base.html
 ---
 
-This is a test
+{% include _header.html %}
+<main class="home-content">{% include _webfunkles.html %}</main>

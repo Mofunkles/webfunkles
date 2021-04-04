@@ -1,7 +1,6 @@
+@forward 'navigation';
 @forward 'header';
 @forward 'footer';
-
-.content {
-  display: grid;
-  place-items: center;
-}
+@forward 'webfunkles';
+@forward 'random';
+@forward 'gallery';

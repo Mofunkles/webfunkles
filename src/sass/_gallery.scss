@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;
+
+  &__content {
+    grid-column: 2 / -2;
+    padding: $gap--medium;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($page--min-width, 100%));
+    grid-gap: $gap--medium;
+  }
+
+  &__image {
+    max-width: 100%;
+    object-fit: cover;
+    place-self: center;
+  }
+}
