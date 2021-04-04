@@ -5,11 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const pages = filesystem.readdirSync(path.resolve(__dirname, 'src/html'));
 
 const addPage = page => {
+  const [name] = page.split('.');
   return new HtmlWebpackPlugin({
     template: path.resolve(__dirname, `src/html/${page}`),
     filename: page,
     inject: false,
-    chunks: [`${page.split('.')[0]}`],
+    chunks: [name],
   });
 };
 
