@@ -15,8 +15,6 @@
     <title>Webfunkles Demonstration | {{ title }}</title>
   </head>
   <body>
-    {% include ../../assets/images/icons.svg %} {% include _navigation.html %} {% include _header.html %}
-    <main class="content">{{ content }}</main>
-    {% include _footer.html %}
+    {% include ../../assets/images/icons.svg %} {% include _navigation.html %} {{ content }} {% include _footer.html %}
   </body>
 </html>

@@ -1,9 +1,10 @@
 ---
 title: Page Three
-header__main: Third Page Header
+header__main: Image Gallery
 header__sub: A page that demonstrates different image types functioning
 layout: _base.html
 permalink: /pagethree.html
 ---
 
-{% include _gallery.html %}
+{% include _header.html %}
+<main class="content-gallery">{% include _gallery.html %}</main>

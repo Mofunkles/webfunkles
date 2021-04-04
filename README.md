@@ -24,7 +24,7 @@ Webpack works from the _src_ folder, using the contents of the _src/html_ for th
 
 ### Development
 
-To run the development server.
+To run the development server:
 
 ```bash
 npm start
@@ -32,7 +32,7 @@ npm start
 
 ### Production
 
-To build the final production code.
+To build the final production code:
 
 ```bash
 npm run build
