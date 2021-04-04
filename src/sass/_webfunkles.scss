@@ -1,9 +1,6 @@
 @use 'variables' as *;
 
 .webfunkles {
-  color: $grey--700;
-  background-color: $grey--100;
-
   display: grid;
   grid-template-columns: 1fr min(65ch, 100%) 1fr;
 
@@ -41,7 +38,7 @@
     margin-bottom: $gap--medium;
 
     & em {
-      color: $orange--400;
+      color: $orange--600;
     }
   }
 

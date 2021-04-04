@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+.random-number {
+  display: grid;
+  grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;
+
+  &__content {
+    grid-column: 2 / -2;
+    padding: $gap--large;
+
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: $gap--large;
+  }
+
+  &__text-box {
+    padding: $gap--medium $gap--large;
+    background-color: $grey--200;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    text-transform: uppercase;
+    margin-bottom: $gap--medium;
+  }
+
+  &__button {
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: $font--large;
+    border: none;
+    padding: $gap--small $gap--medium;
+    color: $grey--700;
+    background-color: $orange--400;
+    outline: none;
+    transition: transform 0.15s ease-in-out;
+
+    &:active {
+      transform: translateY(2px) scale(0.98);
+    }
+  }
+
+  &__number {
+    font-size: 10rem;
+    font-weight: 800;
+    color: $orange--400;
+
+    display: flex;
+    align-items: center;
+  }
+}

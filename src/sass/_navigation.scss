@@ -33,7 +33,7 @@
     display: flex;
 
     & > :not(:first-child) {
-      margin-left: $gap--medium;
+      margin-left: $gap--large;
     }
   }
 }

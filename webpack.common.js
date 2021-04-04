@@ -9,11 +9,22 @@ const addPage = page => {
     template: path.resolve(__dirname, `src/html/${page}`),
     filename: page,
     inject: false,
+    chunks: [`${page.split('.')[0]}`],
   });
 };
 
+const entries = () => {
+  const obj = {};
+  pages.forEach(page => {
+    const [name] = page.split('.');
+    obj[name] = `./src/js/pages/${name}.js`;
+  });
+
+  return obj;
+};
+
 module.exports = {
-  entry: path.resolve(__dirname, 'src/js/index.js'),
+  entry: entries(),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js',

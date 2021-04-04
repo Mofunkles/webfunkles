@@ -20,6 +20,8 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: $font--large;
   line-height: 1.2;
+  color: $grey--700;
+  background-color: $grey--100;
 
   display: grid;
   grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;
