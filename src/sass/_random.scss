@@ -8,12 +8,13 @@
     grid-column: 2 / -2;
     padding: $gap--large;
 
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    grid-gap: $gap--large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &__text-box {
+    grid-column: 2;
     padding: $gap--medium $gap--large;
     background-color: $grey--200;
 
@@ -35,7 +36,7 @@
     border: none;
     padding: $gap--small $gap--medium;
     color: $grey--700;
-    background-color: $orange--400;
+    background-color: var(--primary--400);
     outline: none;
     transition: transform 0.15s ease-in-out;
 
@@ -45,9 +46,10 @@
   }
 
   &__number {
+    grid-column: 3;
     font-size: 10rem;
     font-weight: 800;
-    color: $orange--400;
+    color: var(--primary--400);
 
     display: flex;
     align-items: center;
