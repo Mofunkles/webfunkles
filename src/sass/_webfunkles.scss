@@ -23,13 +23,13 @@
     text-transform: uppercase;
     padding: $gap--small;
     color: $grey--800;
-    background-color: $orange--400;
+    background-color: var(--primary--400);
     margin-top: $gap--large;
     margin-bottom: $gap--medium;
   }
 
   &__subheader {
-    color: $orange--600;
+    color: var(--primary--600);
     margin-top: $gap--medium;
     margin-bottom: $gap--small;
   }
@@ -38,13 +38,13 @@
     margin-bottom: $gap--medium;
 
     & em {
-      color: $orange--600;
+      color: var(--primary--600);
     }
   }
 
   &__code-block {
     font-size: 1.6rem;
-    background-color: rgba($orange--400, 0.15);
+    background-color: var(--primary--100);
     padding: $gap--medium;
   }
 }

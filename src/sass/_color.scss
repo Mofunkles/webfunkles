@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+.color-changer {
+  background-color: $white;
+
+  display: grid;
+  grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;
+
+  &__content {
+    grid-column: 2 / -2;
+    padding: $gap--large;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__text-box {
+    grid-column: 2;
+    text-align: center;
+    padding: $gap--medium $gap--large;
+    margin-top: $gap--medium;
+    background-color: $grey--200;
+  }
+
+  &__colors {
+    width: 100%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__color-orange {
+    width: 20%;
+    height: 15rem;
+    background-color: $orange--400;
+  }
+
+  &__color-pink {
+    width: 20%;
+    height: 15rem;
+    background-color: $pink--400;
+  }
+
+  &__color-aqua {
+    width: 20%;
+    height: 15rem;
+    background-color: $aqua--400;
+  }
+}

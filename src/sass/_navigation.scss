@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .page-navigation {
-  background: $orange--400;
+  background: var(--primary--400);
 
   display: grid;
   grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;

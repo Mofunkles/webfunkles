@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .page-footer {
-  background-color: $orange--400;
+  background-color: var(--primary--400);
 
   display: grid;
   grid-template-columns: 1fr min(#{$page--max-width}, 100%) 1fr;

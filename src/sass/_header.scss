@@ -23,7 +23,7 @@
 
   &__hero-subtitle {
     font-size: $font--large;
-    color: $orange--400;
+    color: var(--primary--400);
 
     display: block;
   }
